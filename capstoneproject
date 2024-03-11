@@ -1,0 +1,301 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNcr9zt89BNVVHMeKa8x2xZ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/oliviangugi/30DayChallenge/blob/main/capstoneproject\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "FzhoZBCrkKZw"
+      },
+      "outputs": [],
+      "source": [
+        "%load_ext sql\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create Superbowl Data base"
+      ],
+      "metadata": {
+        "id": "cLjlxfK7kw2T"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%sql sqlite:///superbowl.db"
+      ],
+      "metadata": {
+        "id": "2YkOKeRPl0HD"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql CREATE TABLE TOYOTA(\n",
+        "YEAR INT PRIMARY KEY,\n",
+        "FUNNY VARCHAR(5),\n",
+        "SHOW_PRODUCT_QUICKLY VARCHAR(5),\n",
+        "CELEBRITY VARCHAR(5)\n",
+        ");"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aq2hKtOCmEIa",
+        "outputId": "4c5ce9fe-199a-4a8b-8d83-beba6a3127da"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "Done.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql CREATE TABLE HYNUDAI(\n",
+        "    YEAR INT PRIMARY KEY,\n",
+        "    FUNNY VARCHAR(5),\n",
+        "    SHOW_PRODUCT_QUICKLY VARCHAR(5),\n",
+        "    CELEBRITY VARCHAR(5)\n",
+        "\n",
+        ");"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CvKO0eQlodtz",
+        "outputId": "e4fa41ac-99fa-492f-e928-7dc813ea7121"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "Done.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql CREATE TABLE KIA(\n",
+        "    YEAR INT PRIMARY KEY,\n",
+        "    FUNNY VARCHAR(5),\n",
+        "    SHOW_PRODUCT_QUICKLY VARCHAR(5),\n",
+        "    CELEBRITY VARCHAR(5)\n",
+        ");"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sYgjjiqwpOmk",
+        "outputId": "da1d7417-1981-4325-f4bf-0169b181754d"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "Done.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Add values into tables"
+      ],
+      "metadata": {
+        "id": "eIYWlv_EqQ-M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql INSERT INTO TOYOTA (YEAR, FUNNY, SHOW_PRODUCT_QUICKLY, CELEBRITY) VALUES\n",
+        "(2018,\tFALSE,\tFALSE,\tFALSE),\n",
+        "(2020,\tTRUE,\tTRUE,\tTRUE),\n",
+        "(2019,\tFALSE,\tTRUE,\tFALSE),\n",
+        "(2016,\tTRUE,\tFALSE,\tFALSE);\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W_0HaDFxqU56",
+        "outputId": "0121577c-8162-494d-b128-4d3b214119cc"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "4 rows affected.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql INSERT INTO HYNUDAI (YEAR, FUNNY, SHOW_PRODUCT_QUICKLY, CELEBRITY) VALUES\n",
+        "(2018,\tFALSE,\tTRUE,\tFALSE),\n",
+        "(2020,\tTRUE,\tTRUE,\tTRUE),\n",
+        "(2019,\tTRUE,\tFALSE,\tTRUE),\n",
+        "(2016,\tTRUE,\tFALSE,\tFALSE);\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aAnSyXfQ5aWW",
+        "outputId": "009a15cd-f2e2-4ba6-9273-f6a83b67629e"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "4 rows affected.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 28
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%sql INSERT INTO TABLE KIA (YEAR, FUNNY, SHOW_PRODUCT_QUICKLY, CELEBRITY) VALUES\n",
+        "(2018,\tFALSE,\tFALSE,\tTRUE),\n",
+        "(2020,\tFALSE,\tFALSE,\tTRUE),\n",
+        "(2019,\tFALSE,\tFALSE,\tFALSE),\n",
+        "(2016,\tTRUE,\tFALSE,\tTRUE);\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xKCkCBbA6Mcv",
+        "outputId": "6fc77f53-6a4b-4ed1-a0b8-477658f11159"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " * sqlite:///superbowl.db\n",
+            "(sqlite3.OperationalError) near \"TABLE\": syntax error\n",
+            "[SQL: INSERT INTO TABLE KIA (YEAR, FUNNY, SHOW_PRODUCT_QUICKLY, CELEBRITY) VALUES\n",
+            "(2018,\tFALSE,\tFALSE,\tTRUE),\n",
+            "(2020,\tFALSE,\tFALSE,\tTRUE),\n",
+            "(2019,\tFALSE,\tFALSE,\tFALSE),\n",
+            "(2016,\tTRUE,\tFALSE,\tTRUE);]\n",
+            "(Background on this error at: https://sqlalche.me/e/20/e3q8)\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
